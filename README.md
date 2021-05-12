@@ -28,15 +28,23 @@ m$Background<-factor(m$Background)
 m$Gender<-factor(m$Gender)
 
 print(head(m))
-#>      PARTICIPANTID variable Rating  Type Instrument  Mode Background Gender
-#> 1 MKATLM2407191050  VPCH MJ      3 Chord      Piano Major     Kalash   Male
-#> 2 MKAJRD2507191630  VPCH MJ      4 Chord      Piano Major     Kalash   Male
-#> 3  MKAAR0108191730  VPCH MJ      4 Chord      Piano Major     Kalash   Male
-#> 4 MKASRD0208191600  VPCH MJ      3 Chord      Piano Major     Kalash   Male
-#> 5 MKAMRJ0308191400  VPCH MJ      2 Chord      Piano Major     Kalash   Male
-#> 6 FKASHR0408191530  VPCH MJ      3 Chord      Piano Major     Kalash Female
+```
+
+    ##      PARTICIPANTID variable Rating  Type Instrument  Mode Background Gender
+    ## 1 MKATLM2407191050  VPCH MJ      3 Chord      Piano Major     Kalash   Male
+    ## 2 MKAJRD2507191630  VPCH MJ      4 Chord      Piano Major     Kalash   Male
+    ## 3  MKAAR0108191730  VPCH MJ      4 Chord      Piano Major     Kalash   Male
+    ## 4 MKASRD0208191600  VPCH MJ      3 Chord      Piano Major     Kalash   Male
+    ## 5 MKAMRJ0308191400  VPCH MJ      2 Chord      Piano Major     Kalash   Male
+    ## 6 FKASHR0408191530  VPCH MJ      3 Chord      Piano Major     Kalash Female
+
+``` r
 length(unique(m$PARTICIPANTID))
-#> [1] 79
+```
+
+    ## [1] 79
+
+``` r
 knitr::kable(table(m$Background,m$Gender)/16,caption = 'Count of participants per Gender and Region.')
 ```
 
@@ -199,7 +207,11 @@ Contrasts (for Figure 1).
 source('figure1.R')
 ```
 
-<img src="visualise-1.png" width="75%" />
+![](README_files/figure-gfm/visualise-1.png)<!-- -->
+
+![](visualise-1.png)
+
+![<https://anonymous.4open.science/r/pakistan-chords-7126/visualise-1.png>](https://anonymous.4open.science/r/pakistan-chords-7126/visualise-1.png)
 
 # Paired chord comparison task
 
@@ -289,114 +301,115 @@ comparing counts across grouping variables.
 
 ``` r
 source('paired_comparison_statistics.R')
-#> , , Background = UK
-#> 
-#>         Type
-#> value    Arpeg Chord
-#>   Major    203   196
-#>   Minor    161   150
-#>   Augm.    105   120
-#>   Chrom.    11    14
-#> 
-#> , , Background = Kalash
-#> 
-#>         Type
-#> value    Arpeg Chord
-#>   Major     44    34
-#>   Minor     78    89
-#>   Augm.     71    73
-#>   Chrom.    47    44
-#> 
-#> , , Background = Khow
-#> 
-#>         Type
-#> value    Arpeg Chord
-#>   Major     25    28
-#>   Minor     83    88
-#>   Augm.     63    65
-#>   Chrom.    57    47
-#> 
-#> Call:
-#> loglm(formula = ~(value + Type) * Background, data = mytable)
-#> 
-#> Statistics:
-#>                       X^2 df  P(> X^2)
-#> Likelihood Ratio 5.321332  9 0.8054457
-#> Pearson          5.313954  9 0.8061264
-#> Call:
-#> loglm(formula = ~value + Background, data = mytable)
-#> 
-#> Statistics:
-#>                      X^2 df P(> X^2)
-#> Likelihood Ratio 302.494  6        0
-#> Pearson          277.798  6        0
-#> , , Background = UK
-#> 
-#>         Instrument
-#> value    Piano Setar
-#>   Major    200   199
-#>   Minor    158   153
-#>   Augm.    108   117
-#>   Chrom.    14    11
-#> 
-#> , , Background = Kalash
-#> 
-#>         Instrument
-#> value    Piano Setar
-#>   Major     37    41
-#>   Minor     81    86
-#>   Augm.     74    70
-#>   Chrom.    48    43
-#> 
-#> , , Background = Khow
-#> 
-#>         Instrument
-#> value    Piano Setar
-#>   Major     27    26
-#>   Minor     85    86
-#>   Augm.     62    66
-#>   Chrom.    54    50
-#> 
-#> Call:
-#> loglm(formula = ~(value + Instrument) * Background, data = mytable)
-#> 
-#> Statistics:
-#>                       X^2 df  P(> X^2)
-#> Likelihood Ratio 1.848412  9 0.9936441
-#> Pearson          1.847119  9 0.9936608
-#> Call:
-#> loglm(formula = ~value + Instrument + Background + value * Instrument + 
-#>     value * Background + Instrument * Background, data = mytable)
-#> 
-#> Statistics:
-#>                        X^2 df  P(> X^2)
-#> Likelihood Ratio 0.9651768  6 0.9868980
-#> Pearson          0.9649240  6 0.9869071
-#>        Background  UK Kalash Khow
-#> value                            
-#> Major             399     78   53
-#> Minor             311    167  171
-#> Augm.             225    144  128
-#> Chrom.             25     91  104
-#> Call: xtabs(formula = ~value + Background, data = p)
-#> Number of cases in table: 1896 
-#> Number of factors: 2 
-#> Test for independence of all factors:
-#>  Chisq = 277.8, df = 6, p-value = 4.651e-57
-#>         Background
-#> value    Kalash Khow
-#>   Major      78   53
-#>   Minor     167  171
-#>   Augm.     144  128
-#>   Chrom.     91  104
-#> Call:
-#> loglm(formula = ~value + Background, data = mytable)
-#> 
-#> Statistics:
-#>                       X^2 df  P(> X^2)
-#> Likelihood Ratio 6.041299  3 0.1096182
-#> Pearson          6.014743  3 0.1108952
 ```
+
+    ## , , Background = UK
+    ## 
+    ##         Type
+    ## value    Arpeg Chord
+    ##   Major    203   196
+    ##   Minor    161   150
+    ##   Augm.    105   120
+    ##   Chrom.    11    14
+    ## 
+    ## , , Background = Kalash
+    ## 
+    ##         Type
+    ## value    Arpeg Chord
+    ##   Major     44    34
+    ##   Minor     78    89
+    ##   Augm.     71    73
+    ##   Chrom.    47    44
+    ## 
+    ## , , Background = Khow
+    ## 
+    ##         Type
+    ## value    Arpeg Chord
+    ##   Major     25    28
+    ##   Minor     83    88
+    ##   Augm.     63    65
+    ##   Chrom.    57    47
+    ## 
+    ## Call:
+    ## loglm(formula = ~(value + Type) * Background, data = mytable)
+    ## 
+    ## Statistics:
+    ##                       X^2 df  P(> X^2)
+    ## Likelihood Ratio 5.321332  9 0.8054457
+    ## Pearson          5.313954  9 0.8061264
+    ## Call:
+    ## loglm(formula = ~value + Background, data = mytable)
+    ## 
+    ## Statistics:
+    ##                      X^2 df P(> X^2)
+    ## Likelihood Ratio 302.494  6        0
+    ## Pearson          277.798  6        0
+    ## , , Background = UK
+    ## 
+    ##         Instrument
+    ## value    Piano Setar
+    ##   Major    200   199
+    ##   Minor    158   153
+    ##   Augm.    108   117
+    ##   Chrom.    14    11
+    ## 
+    ## , , Background = Kalash
+    ## 
+    ##         Instrument
+    ## value    Piano Setar
+    ##   Major     37    41
+    ##   Minor     81    86
+    ##   Augm.     74    70
+    ##   Chrom.    48    43
+    ## 
+    ## , , Background = Khow
+    ## 
+    ##         Instrument
+    ## value    Piano Setar
+    ##   Major     27    26
+    ##   Minor     85    86
+    ##   Augm.     62    66
+    ##   Chrom.    54    50
+    ## 
+    ## Call:
+    ## loglm(formula = ~(value + Instrument) * Background, data = mytable)
+    ## 
+    ## Statistics:
+    ##                       X^2 df  P(> X^2)
+    ## Likelihood Ratio 1.848412  9 0.9936441
+    ## Pearson          1.847119  9 0.9936608
+    ## Call:
+    ## loglm(formula = ~value + Instrument + Background + value * Instrument + 
+    ##     value * Background + Instrument * Background, data = mytable)
+    ## 
+    ## Statistics:
+    ##                        X^2 df  P(> X^2)
+    ## Likelihood Ratio 0.9651768  6 0.9868980
+    ## Pearson          0.9649240  6 0.9869071
+    ##        Background  UK Kalash Khow
+    ## value                            
+    ## Major             399     78   53
+    ## Minor             311    167  171
+    ## Augm.             225    144  128
+    ## Chrom.             25     91  104
+    ## Call: xtabs(formula = ~value + Background, data = p)
+    ## Number of cases in table: 1896 
+    ## Number of factors: 2 
+    ## Test for independence of all factors:
+    ##  Chisq = 277.8, df = 6, p-value = 4.651e-57
+    ##         Background
+    ## value    Kalash Khow
+    ##   Major      78   53
+    ##   Minor     167  171
+    ##   Augm.     144  128
+    ##   Chrom.     91  104
+    ## Call:
+    ## loglm(formula = ~value + Background, data = mytable)
+    ## 
+    ## Statistics:
+    ##                       X^2 df  P(> X^2)
+    ## Likelihood Ratio 6.041299  3 0.1096182
+    ## Pearson          6.014743  3 0.1108952
 
 ## Figure 2: Visualise major and minor chord with paired selections
 
@@ -404,7 +417,7 @@ source('paired_comparison_statistics.R')
 source('figure2.R') 
 ```
 
-<img src="figure2-1.png" width="75%" />
+![](README_files/figure-gfm/figure2-1.png)<!-- -->
 
 ## Supporting Information
 
@@ -461,7 +474,7 @@ for (k in 1:4) {
 
 ### Plot quantiles
 
-<img src="plotquantiles-1.png" width="75%" /><img src="plotquantiles-2.png" width="75%" /><img src="plotquantiles-3.png" width="75%" /><img src="plotquantiles-4.png" width="75%" /><img src="plotquantiles-5.png" width="75%" />
+![](README_files/figure-gfm/plotquantiles-1.png)<!-- -->![](README_files/figure-gfm/plotquantiles-2.png)<!-- -->![](README_files/figure-gfm/plotquantiles-3.png)<!-- -->![](README_files/figure-gfm/plotquantiles-4.png)<!-- -->![](README_files/figure-gfm/plotquantiles-5.png)<!-- -->
 
 ## Summary of stimulus analyses
 

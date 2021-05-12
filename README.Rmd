@@ -5,13 +5,13 @@ output: github_document
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
 ```{r, include = FALSE}
-knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>",
-  fig.path = "",
+#knitr::opts_chunk$set(
+#  collapse = TRUE,
+#  comment = "#>",
+#  fig.path = "",
 #  fig.path = "man/figures/README-",
-  out.width = "75%"
-)
+#  out.width = "75%"
+#)
 ```
 
 # Pakistan chord study (pakistan-chords)
@@ -59,6 +59,10 @@ source('LMM_analysis.R',echo = TRUE)
 ```{r visualise,echo=TRUE,fig.width=9,fig.height=5,caption='Figure 1. Mean valence ratings across Culture and Type (arpeggio vs. vertical chord) for each chord. The p-values reflect contrast analyses with GLMM with Tukey’s method for adjusting multiple corrections that have been carried out between chords, Type, or Culture.'}
 source('figure1.R')
 ```
+
+![visualise-1.png](visualise-1.png)
+
+![https://anonymous.4open.science/r/pakistan-chords-7126/visualise-1.png](https://anonymous.4open.science/r/pakistan-chords-7126/visualise-1.png)
 
 # Paired chord comparison task
 

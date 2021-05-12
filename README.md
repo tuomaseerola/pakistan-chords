@@ -8,8 +8,8 @@
 
 This repository contains data and analysis concerning study titled
 “Sweetness is in the Ear of the Beholder: Chord Preference Across
-Western and Pakistani Listeners” by AUTHORS. These files are available
-at REMOVED FOR REVIEW.
+Western and Pakistani Listeners” by *AUTHORS*. These files are available
+at *REMOVED FOR REVIEW*.
 
 ## Load the data
 
@@ -199,7 +199,7 @@ Contrasts (for Figure 1).
 source('figure1.R')
 ```
 
-<img src="man/figures/README-visualise-1.png" width="75%" />
+<img src="visualise-1.png" width="75%" />
 
 # Paired chord comparison task
 
@@ -404,7 +404,7 @@ source('paired_comparison_statistics.R')
 source('figure2.R') 
 ```
 
-<img src="man/figures/README-figure2-1.png" width="75%" />
+<img src="figure2-1.png" width="75%" />
 
 ## Supporting Information
 
@@ -461,7 +461,7 @@ for (k in 1:4) {
 
 ### Plot quantiles
 
-<img src="man/figures/README-plotquantiles-1.png" width="75%" /><img src="man/figures/README-plotquantiles-2.png" width="75%" /><img src="man/figures/README-plotquantiles-3.png" width="75%" /><img src="man/figures/README-plotquantiles-4.png" width="75%" /><img src="man/figures/README-plotquantiles-5.png" width="75%" />
+<img src="plotquantiles-1.png" width="75%" /><img src="plotquantiles-2.png" width="75%" /><img src="plotquantiles-3.png" width="75%" /><img src="plotquantiles-4.png" width="75%" /><img src="plotquantiles-5.png" width="75%" />
 
 ## Summary of stimulus analyses
 

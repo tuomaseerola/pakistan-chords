@@ -1,5 +1,4 @@
 # consistency.R (script)
-  # T. Eerola 27/3/2019
 
 library(psych)
 library(reshape2)
@@ -65,5 +64,4 @@ cat(paste('\nUK - alpha: ',round(a$total$raw_alpha,3))) # 0.959
 
 
 rm(N,U,a,k,m_ka,m_ko,m_uk,tmp,tmp0)
-  
   

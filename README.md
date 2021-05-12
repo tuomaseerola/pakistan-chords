@@ -209,10 +209,6 @@ source('figure1.R')
 
 ![](README_files/figure-gfm/visualise-1.png)<!-- -->
 
-![](visualise-1.png)
-
-![<https://anonymous.4open.science/r/pakistan-chords-7126/visualise-1.png>](https://anonymous.4open.science/r/pakistan-chords-7126/visualise-1.png)
-
 # Paired chord comparison task
 
 Create various tables of counts across grouping variables (Instrument,

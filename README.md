@@ -8,9 +8,8 @@
 
 This repository contains data and analysis concerning study titled
 “Sweetness is in the Ear of the Beholder: Chord Preference Across
-Western and Pakistani Listeners” by Imre Lahdelma, George
-Athanasopoulos, and Tuomas Eerola. These files are available at
-<https://github.com/tuomaseerola/pakistan-chords/>.
+Western and Pakistani Listeners” by AUTHORS. These files are available
+at REMOVED FOR REVIEW.
 
 ## Load the data
 

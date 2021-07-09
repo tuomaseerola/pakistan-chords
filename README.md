@@ -6,10 +6,12 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-This repository contains data and analysis concerning study titled
-“Sweetness is in the Ear of the Beholder: Chord Preference Across
-Western and Pakistani Listeners” by *AUTHORS*. These files are available
-at *REMOVED FOR REVIEW*.
+This repository contains data and analysis of a study:
+
+> Lahdelma, I, Athanasopoulos, G. and Eerola, T. (2021). Sweetness is in
+> the ear of the beholder: Chord preference across United Kingdom and
+> Pakistani listeners. Annals of the New York Academy of Sciences,
+> <https://doi.org/10.1111/nyas.14655>.
 
 ## Load the data
 
